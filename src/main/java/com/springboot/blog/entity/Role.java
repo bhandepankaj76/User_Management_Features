@@ -1,0 +1,54 @@
+package com.springboot.blog.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+//@Getter
+//@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
+@Entity
+@Table(name = "roles")
+public class Role {
+
+    public Role() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Role(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+	
+	// Use Getters & Setters to ( ID, Name )
+	
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+	/* - - - - - - - - - - - - - - - - Getters & Setters ( Id ) - - - - - - - - - - - - - - - - - */
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	/* - - - - - - - - - - - - - - - - Getters & Setters ( Name ) - - - - - - - - - - - - - - - - */
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+		
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	}
+}
